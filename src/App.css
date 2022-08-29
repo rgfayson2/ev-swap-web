@@ -1,5 +1,24 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 .App {
   flex: content;
-  justify-content: center;
-  background-color: aquamarine;
+  flex-direction: column-reverse;
+  text-align: center;
+  justify-content: space-around;
+  background-color: lightgreen;
+}
+.Hero {
+  flex: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Header {
+  flex: auto;
+  flex-wrap: nowrap;
+}
+
+.Footer {
+  flex: auto;
+  flex-wrap: nowrap;
 }
