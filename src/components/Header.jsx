@@ -3,7 +3,6 @@ import React from "react";
 export default function(Header) {
     return (
         <>
-        <h4>This is the Header</h4>
         <div>
         <h5>menu</h5>
         </div>

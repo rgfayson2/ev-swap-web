@@ -8,13 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
     <div>
-      <div>
+      <div className="Header">
         <Header />
       </div>
-      <div>
+      <div className="App">
+      <img className="mission-hero-img" 
+      src="https://via.placeholder.com/513x341" alt="placeholder" />
         <Hero />
       </div>
-      <div>
+      <div className="Footer">
         <Footer />
       </div>
     </div>
