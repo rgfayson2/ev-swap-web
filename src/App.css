@@ -6,26 +6,41 @@
   width: 100%;
   height: 80vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  
   color: aqua;
-  background-color: coral;
+  
 }  
 
 .Header {
-  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   padding: 20px;
   text-align: center;
   color: aqua;
+  background-color: coral;
 }
 
 .Footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   padding: 20px;
   text-align: center;
   color: aqua;
-  
-}
+  background-color: coral;
+  }
+
+  .Form {
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
 
 

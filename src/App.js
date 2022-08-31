@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Footer from "./components/Footer"
+import Form from "./components/Form"
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -12,9 +13,8 @@ function App() {
         <Header />
       </div>
       <div className="App">
-      <img className="mission-hero-img" 
-      src="https://via.placeholder.com/513x341" alt="placeholder" />
         <Hero />
+        <Form />
       </div>
       <div className="Footer">
         <Footer />
