@@ -1,6 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 .App {
   width: 100%;
@@ -9,10 +7,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  
+
   color: aqua;
-  
-}  
+}
 
 .Header {
   display: flex;
@@ -34,13 +31,18 @@
   text-align: center;
   color: aqua;
   background-color: coral;
-  }
+}
 
-  .Form {
-    display: flexbox;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+.Form {
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 
+.Card {
+  display: flexbox;
+  padding: 5em;
+  margin-top: -20em;
+  justify-content: center;
 
-
+}

@@ -2,9 +2,10 @@ import React from "react"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Footer from "./components/Footer"
-import Form from "./components/Form"
+import Newcar from "./components/Newcar"
+import Search from "./components/Search"
 import "./App.css"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
       </div>
       <div className="App">
         <Hero />
-        <Form />
       </div>
+
+      <Newcar />
+      <div>{/* <Search /> */}</div>
       <div className="Footer">
         <Footer />
       </div>
