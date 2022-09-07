@@ -21,13 +21,13 @@ export default function AddNewCar({ setCarlist }) {
       .catch(console.error)
   }
   return (
-    <div>
+    <div className="App">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>Car Info</Card.Title>
           <div>
-            <InputGroup className="mb-3">
+            <InputGroup size="lg">
               <InputGroup.Text id="inputGroup-sizing-default">
                 Make
               </InputGroup.Text>
@@ -38,7 +38,7 @@ export default function AddNewCar({ setCarlist }) {
             </InputGroup>
           </div>
           <div>
-            <InputGroup className="mb-3">
+            <InputGroup size="lg">
               <InputGroup.Text id="inputGroup-sizing-default">
                 Model
               </InputGroup.Text>
@@ -49,7 +49,7 @@ export default function AddNewCar({ setCarlist }) {
             </InputGroup>
           </div>
           <div>
-            <InputGroup className="mb-3">
+            <InputGroup size="lg">
               <InputGroup.Text id="inputGroup-sizing-default">
                 Year
               </InputGroup.Text>
@@ -60,7 +60,7 @@ export default function AddNewCar({ setCarlist }) {
             </InputGroup>
           </div>
           <div>
-            <InputGroup className="mb-3">
+            <InputGroup size="lg">
               <InputGroup.Text id="inputGroup-sizing-default">
                 Color
               </InputGroup.Text>
@@ -70,8 +70,8 @@ export default function AddNewCar({ setCarlist }) {
               />
             </InputGroup>
           </div>
-          <div className='create-car'>
-          <Button variant="primary" id="submit"onChange={createCar}>Add Car</Button>
+          <div>
+          <Button variant="primary" id="submit"onSubmit={createCar}>Add Car</Button>
           </div>
         </Card.Body>
       </Card>

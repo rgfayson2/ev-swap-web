@@ -1,14 +1,12 @@
-import React from "react";
+import React from "react"
+import Logo from "../assets/Logonobg.png"
 
-export default function(Footer) {
-    return(
-        <>
-        <h5>link</h5>
-        <img 
-        className="Logo"
-        src="Photo_1662386488078.jpg" 
-        width="50" height="50" />
-        <h5> by Roderick Fayson &copy;</h5>        
-        </>
-    )
+export default function Footer() {
+  return (
+    <footer className="Footer">
+      <h5>link</h5>
+      <img src={Logo} alt="" width="50" height="50" />
+      <h5>Created by Roderick Fayson &copy;</h5>
+    </footer>
+  )
 }

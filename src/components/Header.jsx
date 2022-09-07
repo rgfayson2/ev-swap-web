@@ -1,19 +1,19 @@
 import React from "react"
+import Logo from "../assets/Logonobg.png"
 
-export default function (Header) {
+export default function Header() {
   return (
-    <>
+    <header className="Header">
+      <nav>
+        <a href="Sign Up">Sign Up</a>
+      </nav>
       <div>
-        <h5>menu</h5>
+        <img src={Logo} alt="" width="100" height="100" />
       </div>
-      <div>
-        <img 
-        className="Logo"
-        src="Photo_1662386488078.jpg" 
-        width="50" height="50" />
-      </div>
-      <h5>favorite</h5>
-      <h5>sign in</h5>
-    </>
+      <nav>
+        <a href="Login">Login</a>
+      </nav>
+
+    </header>
   )
 }
