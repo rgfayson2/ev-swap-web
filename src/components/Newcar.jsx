@@ -2,8 +2,10 @@ import { useState } from "react"
 import { Button, InputGroup, Card, Form } from "react-bootstrap"
 import Logo from "../assets/Logo.jpg"
 
-export default function AddNewCar({ setCarlist }) {
-  const [car, setCar] = useState("")
+
+export default function AddNewCar() {
+  const [setCar] = useState()
+  let car = {make:"honda",model:"accord",year:"2017",color:"white"}
   const createCar = () => {
     fetch("http://localhost:4000/cars", {
     // fetch("https://https://ev-swap-api.web.app//cars", {
@@ -12,12 +14,11 @@ export default function AddNewCar({ setCarlist }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ car, done: false }),
+      body: JSON.stringify(car),
     })
       .then((results) => results.json())
       .then((data) => {
-        setCarlist(data)
-        setCar("")
+        setCar(data)
       })
       .catch(console.error)
   }
@@ -75,7 +76,7 @@ export default function AddNewCar({ setCarlist }) {
           <Button 
           variant="primary" 
           id="submit" 
-          onSubmit={createCar}>Add Car</Button>
+          onClick={createCar}>Add Car</Button>
           </div>
         </Card.Body>
       </Card>

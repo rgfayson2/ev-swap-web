@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "./components/Header"
-import Hero from "./components/Hero"
+// import Hero from "./components/Hero"
 import Footer from "./components/Footer"
 import Newcar from "./components/Newcar"
 import "./App.css"
@@ -12,9 +12,9 @@ function App() {
       <div>
         <Header />
       </div>
-      <div>
+      {/* <div>
         <Hero />
-      </div>
+      </div> */}
       <div>
         <Newcar />
       </div>
