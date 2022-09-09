@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
 import Form from "react-bootstrap/Form"
 
-function StaticExample() {
+export default function Login() {
   return (
     <Modal.Dialog>
       <Modal.Header closeButton>
@@ -35,4 +35,3 @@ function StaticExample() {
   )
 }
 
-export default StaticExample

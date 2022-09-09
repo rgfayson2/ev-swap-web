@@ -2,14 +2,11 @@ import { useState } from "react"
 import { Button, InputGroup, Card, Form } from "react-bootstrap"
 import Logo from "../assets/Logo.jpg"
 
-export default function AddNewCar() {
+export default function AddCar() {
   const [make, setMake] = useState()
   const [model, setModel] = useState()
   const [year, setYear] = useState()
   const [color, setColor] = useState()
-
-
-
 
   const newCar = {
     make: make,
@@ -37,11 +34,6 @@ export default function AddNewCar() {
       .catch(console.error)
   }
 
-  // const updateForm = (event) => {
-  //   //console.log(event.target.value)
-  //   setForm({ ...form, [event.target.name]: event.target.value })
-  // }
-
   return (
     <div className="App">
       <Card style={{ width: "18rem" }}>
@@ -50,77 +42,49 @@ export default function AddNewCar() {
           <Card.Title>Car Info</Card.Title>
           <div>
             <InputGroup size="lg">
-              <InputGroup.Text
-                id="inputGroup-sizing-default"
-                //     type='text'
-                // name='make'
-                // // required
-                // value={form.make}
-                //onChange={updateForm}
-              >
+              <InputGroup.Text id="inputGroup-sizing-default">
                 Make
               </InputGroup.Text>
               <Form.Control
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
-                onChange={e => setMake(e.target.value)}
+                onChange={(e) => setMake(e.target.value)}
               />
             </InputGroup>
           </div>
           <div>
             <InputGroup size="lg">
-              <InputGroup.Text
-                id="inputGroup-sizing-default"
-                //     type='text'
-                // name='model'
-                // // required
-                // value={form.model}
-                //onChange={updateForm}
-              >
+              <InputGroup.Text id="inputGroup-sizing-default">
                 Model
               </InputGroup.Text>
               <Form.Control
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
-                onChange={e => setModel(e.target.value)}
+                onChange={(e) => setModel(e.target.value)}
               />
             </InputGroup>
           </div>
           <div>
             <InputGroup size="lg">
-              <InputGroup.Text
-                // type='text'
-                // name='year'
-                // // required
-                // value={form.year}
-                //onChange={updateForm}
-                id="inputGroup-sizing-default"
-              >
+              <InputGroup.Text id="inputGroup-sizing-default">
                 Year
               </InputGroup.Text>
               <Form.Control
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
-                onChange={e => setYear(e.target.value)}
+                onChange={(e) => setYear(e.target.value)}
               />
             </InputGroup>
           </div>
           <div>
             <InputGroup size="lg">
-              <InputGroup.Text
-                // type='text'
-                // name='color'
-                // // required
-                // value={form.color}
-                //onChange={updateForm}
-                id="inputGroup-sizing-default"
-              >
+              <InputGroup.Text id="inputGroup-sizing-default">
                 Color
               </InputGroup.Text>
               <Form.Control
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
-                onChange={e => setColor(e.target.value)}
+                onChange={(e) => setColor(e.target.value)}
               />
             </InputGroup>
           </div>
