@@ -4,7 +4,7 @@ import Logo from "../assets/Logonobg.png"
 export default function Header() {
   return (
     <header className="Header">
-      <div>
+      <div className="Navlink">
       <nav>
         <a href="Home">Home</a>
       </nav>

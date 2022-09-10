@@ -17,18 +17,30 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   color: aqua;
   background-color: coral;
+}
+
+.Navlinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 10px;
+
 }
 
 .Footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   color: aqua;
   background-color: coral;
