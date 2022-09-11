@@ -2,19 +2,19 @@ import Card from "react-bootstrap/Card"
 
 export default function CarCard({ carObj }) {
   return (
-    <Card className="card-container">
+    <Card className="car-container">
       <Card.Body
-        style={{ height: "400px", backgroundColor: "#999" }}
+        style={{ height: "500px", backgroundColor: "#999" }}
         className="d-flex flex-column align-items-center"
       >
-        <div className="cp-container">
+        <div className="info-container">
           <Card.Title>Make: {carObj.make}</Card.Title>
           <br />
-          <Card.Text>{carObj.model}</Card.Text>
+          <Card.Text>Model: {carObj.model}</Card.Text>
           <br />
-          <Card.Text>{carObj.year}</Card.Text>
+          <Card.Text>Year: {carObj.year}</Card.Text>
           <br />
-          <Card.Text>{carObj.color}</Card.Text>
+          <Card.Text>Color: {carObj.color}</Card.Text>
         </div>
       </Card.Body>
     </Card>
