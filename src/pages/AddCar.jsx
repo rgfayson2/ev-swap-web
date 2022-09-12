@@ -15,9 +15,12 @@ export default function AddCar() {
     color: color,
   }
 
-  const createCar = ({ car }) => {
-    fetch("http://localhost:4000/cars", {
-      // fetch("https://https://ev-swap-api.web.app//cars", {
+
+  const createCar = event => {
+   event.preventDefault()
+
+    // fetch("http://localhost:4000/cars", {
+      fetch("https://ev-swap-api.web.app/cars", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -28,6 +31,11 @@ export default function AddCar() {
       .then((results) => results.json())
       .then((data) => {
         console.log(data)
+        setMake("")
+        setModel("")
+        setYear("")
+        setColor("")
+
       })
       .then(console.log({ newCar }))
       .then()
@@ -36,31 +44,34 @@ export default function AddCar() {
 
   return (
     <div className="App">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }} >
         <Card.Img variant="top" src={Logo} />
         <Card.Body>
           <Card.Title>Car Info</Card.Title>
           <div>
             <InputGroup size="lg">
-              <InputGroup.Text id="inputGroup-sizing-default">
+              <InputGroup.Text id="inputGroup-sizing-lg">
                 Make
               </InputGroup.Text>
               <Form.Control
-                aria-label="Default"
-                aria-describedby="inputGroup-sizing-default"
+              onSubmit={(e) => e.preventDefault()}
+              aria-label="Default"
+              aria-describedby="inputGroup-sizing-default"
                 onChange={(e) => setMake(e.target.value)}
+                value={make}
               />
             </InputGroup>
           </div>
           <div>
             <InputGroup size="lg">
-              <InputGroup.Text id="inputGroup-sizing-default">
+              <InputGroup.Text id="inputGroup-sizing-lg">
                 Model
               </InputGroup.Text>
               <Form.Control
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
                 onChange={(e) => setModel(e.target.value)}
+                value={model}
               />
             </InputGroup>
           </div>
@@ -73,6 +84,7 @@ export default function AddCar() {
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
                 onChange={(e) => setYear(e.target.value)}
+                value={year}
               />
             </InputGroup>
           </div>
@@ -85,11 +97,12 @@ export default function AddCar() {
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
                 onChange={(e) => setColor(e.target.value)}
+                value={color}
               />
             </InputGroup>
           </div>
           <div>
-            <Button variant="primary" id="submit" onClick={createCar}>
+            <Button variant="primary" id="submit" onClick={event => createCar(event)}>
               Add Car
             </Button>
           </div>
