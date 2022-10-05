@@ -1,30 +1,64 @@
-import React from "react";
-import { Form, Modal, Button } from "react-bootstrap";
+import { useState } from "react"
+import { Form, Modal, Button } from "react-bootstrap"
 
 export default function SignUp() {
-    return(
-        <div className="App">
-        <Modal.Dialog>
-          
-            <Modal.Title>Sign Up</Modal.Title>
-          
-          <Form>
-            <Form.Group >
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text >
-               Enter a valid e-mail address
-              </Form.Text>
-            </Form.Group>
-            <Form.Group  >
-              <Form.Control type="password" placeholder="Password" />
-              Choose a Password
-            </Form.Group>
-          </Form>
-          <Modal.Footer>
-            <Button >Create Login</Button>
-          </Modal.Footer>
-        </Modal.Dialog>
-        </div>
-    )
-}
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
 
+  const newUser = {
+    email: email,
+    pasword: password,
+  }
+
+  const createUser = (event) => {
+    event.preventDefault()
+
+    fetch("http://localhost:4000/users", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((results) => results.json())
+      .then((data) => {
+        console.log(data)
+        setEmail("")
+        setPassword("")
+      })
+      .then(console.log({ newUser }))
+      .then()
+      .catch(console.error)
+  }
+  return (
+    <div className="App">
+      <Modal.Dialog>
+        <h1>Sign Up</h1>
+        <Form>
+          <Form.Group>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              onChange={(event) => setEmail(event.target.value)}
+              value={email}
+            />
+            <Form.Text>Enter a valid e-mail address</Form.Text>
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onChange={(event) => setPassword(event.target.value)}
+              value={password}
+            />
+            Choose a Password
+          </Form.Group>
+        </Form>
+        <Modal.Footer>
+          <Button onClick={(event) => createUser(event)}>Create Login</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
+  )
+}

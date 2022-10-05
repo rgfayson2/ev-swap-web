@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
 import Form from "react-bootstrap/Form"
+// import { useState } from "react"
 
 export default function Login() {
   return (
@@ -10,7 +11,7 @@ export default function Login() {
         <Form>
           <Form.Group>
             <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
+            <Form.Text>
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
@@ -22,7 +23,9 @@ export default function Login() {
           </Form.Group>
         </Form>
         <Modal.Footer>
-          <Button>Login</Button>
+          <Button variant="primary" id="submit">
+            Login
+          </Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>
