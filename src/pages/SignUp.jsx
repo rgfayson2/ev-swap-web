@@ -7,13 +7,14 @@ export default function SignUp() {
 
   const newUser = {
     email: email,
-    pasword: password,
+    password: password,
   }
 
   const createUser = (event) => {
     event.preventDefault()
 
     fetch("http://localhost:4000/users", {
+      // fetch("https://ev-swap-api.web.app/users",{
       method: "POST",
       mode: "cors",
       headers: {
@@ -35,7 +36,7 @@ export default function SignUp() {
     <div className="App">
       <Modal.Dialog>
         <h1>Sign Up</h1>
-        <Form>
+        <Form onSubmit={(e) => e.preventDefault()}>
           <Form.Group>
             <Form.Control
               type="email"

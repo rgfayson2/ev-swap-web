@@ -10,16 +10,15 @@ export default function Footer() {
     <footer className="Footer">
       <div>
         <h5>Follow Us</h5>
-        <div >
-        <img src={IGlogo} alt="" width="50" height="50" />
-        <img src={Facebook} alt="" width="50" height="50" />
-        <img src={TikTok} alt="" width="50" height="50" />
-        <img src={Twitter} alt="" width="50" height="50" />
+        <div>
+          <img src={IGlogo} alt="" width="50" height="50" />
+          <img src={Facebook} alt="" width="50" height="50" />
+          <img src={TikTok} alt="" width="50" height="50" />
+          <img src={Twitter} alt="" width="50" height="50" />
         </div>
       </div>
-
       <img src={Logo} alt="" width="100" height="100" />
-      <h5>Created by Roderick Fayson &copy;</h5>
+      <h5>TFK Media LLC &copy;</h5>
     </footer>
   )
 }

@@ -19,8 +19,8 @@ export default function AddCar() {
   const createCar = event => {
    event.preventDefault()
 
-    // fetch("http://localhost:4000/cars", {
-      fetch("https://ev-swap-api.web.app/cars", {
+    fetch("http://localhost:4000/cars", {
+      // fetch("https://ev-swap-api.web.app/cars", {
       method: "POST",
       mode: "cors",
       headers: {

@@ -11,8 +11,8 @@ export default function Cars() {
   }
 
   useEffect(() => {
-    // fetch("http://localhost:4000/cars")
-      fetch("https://ev-swap-api.web.app/cars")
+    fetch("http://localhost:4000/cars")
+      // fetch("https://ev-swap-api.web.app/cars")
       .then((results) => results.json())
       .then((data) => setCars(data))
       .catch(console.error)
@@ -25,12 +25,10 @@ export default function Cars() {
         className="App"
         variant="light"
         slide={false}
-        interval={null}
-      >
+        interval={null}>
         {cars.map((car, id) => (
           <Carousel.Item key={id}>
             <CarCard carObj={car} />
-
             <Carousel.Caption>
               <Button
                 className="cp-btn"
